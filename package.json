@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/saiful-4321/node-first/issues"
   },
-  "homepage": "https://github.com/saiful-4321/node-first#readme"
+  "homepage": "https://github.com/saiful-4321/node-first#readme",
+  "dependencies": {
+    "underscore": "^1.13.1"
+  }
 }
