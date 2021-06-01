@@ -1,2 +1,2 @@
 # node-first
-First node js practive
+First node js practice
