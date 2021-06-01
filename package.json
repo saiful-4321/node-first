@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/saiful-4321/node-first#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
     "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.13.0"
   }
 }
