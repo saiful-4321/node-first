@@ -1,20 +1,26 @@
 const express = require('express')
 const app = express()
 
+const courses = [
+    { id : 1, name : 'Course 1'},
+    { id : 2, name : 'Course 2'},
+    { id : 3, name : 'Course 3'}
+]
+
 app.get('/', (request, response) => {
     response.send("Hello World v2")
 })
 
 app.get('/api/courses', (request, response) => {
-    response.send([1,2,3,4,5])
+    response.send(courses)
 })
 
-app.get('/api/courses/:year/:id', (request, response) => {
-    // getting all params
-    // response.send(request.params)
+app.get('/api/courses/:id', (request, response) => {
+    const course = courses.find(data => data.id === parseInt(request.params.id))
 
-    // getting all query string
-    response.send(request.query)
+    if(!course) response.status(404).send('Course not found.')
+
+    response.send(course)
 })
 
 const port = process.env.PORT || 3000;
